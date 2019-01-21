@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "m8B3L3qJ3tFfP6BI9pIFr9oal3w=",
+			"path": "github.com/gorhill/cronexpr",
+			"revision": "88b0669f7d75f171bd612b874e52b95c190218df",
+			"revisionTime": "2018-04-27T10:00:37Z"
+		}
+	],
+	"rootPath": "workspace/GettingStarted"
+}
