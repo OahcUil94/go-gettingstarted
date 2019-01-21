@@ -54,5 +54,5 @@ func main() {
 
 	// 等待子协程的退出，并打印任务执行结果
 	res = <- resultChan
-	fmt.Println(res.err, string(res.output)) // signal: killed 
+	fmt.Println(res.err, string(res.output)) // signal: killed
 }
