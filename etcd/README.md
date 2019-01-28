@@ -43,5 +43,7 @@ cURL Command: curl -X GET http://0.0.0.0:2379/v2/keys/?quorum=false&recursive=fa
 ## 打包遇到的问题
 
 遇到两个非常坑的问题，最终还没有解决：
-- run.sh的开头添加`!#/bin/sh`，则会报错，`!#/bin/sh: not found`，但是不会停止运行
-- 无论run.sh开头是否添加`!#/bin/sh`，使用ENTRYPOINT运行，都会报错：`exec user process caused "exec format error"`
+- run.sh的开头添加`#!/bin/sh`，使用CMD运行，会报错，`#!/bin/sh: not found`，但是不会停止运行
+- 无论run.sh开头是否添加`#!/bin/sh`，使用ENTRYPOINT运行，都会报错：`exec user process caused "exec format error"`
+
+以上两个问题最后解决了，在尝试用UTF-8编码重新保存（注意：不是UTF-8 BOM编码），然后来回切换了一下Unix换行符，就可以了，还尝试了换成这种写法：`#!/usr/bin/env sh`，最后试了试`#!/bin/sh`，可以了。

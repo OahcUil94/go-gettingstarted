@@ -15,5 +15,6 @@ RUN chmod +x /bin/run.sh
 VOLUME /data
 EXPOSE 2379 2380 4001 7001
 
-CMD ["/bin/sh", "-c", "/bin/run.sh"]
+# CMD ["/bin/sh", "-c", "/bin/run.sh"]
 
+ENTRYPOINT ["/bin/run.sh"]
